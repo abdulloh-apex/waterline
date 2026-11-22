@@ -85,7 +85,7 @@ export function App() {
       <div className="grading" aria-hidden="true" />
       <div ref={pane} className="pane" aria-hidden="true" />
       <header className="top">
-        <img className="brand-mark" src={`${import.meta.env.BASE_URL}waterline-mark.png`} width="38" height="38"
+        <img className="brand-mark" src={`${import.meta.env.BASE_URL}logo.png`} width="42" height="22"
           alt="" aria-hidden="true" />
         <a className="site-link" href={config.site}>
           <TextMotion text="visit site" paused={paused} />
