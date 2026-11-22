@@ -54,7 +54,6 @@ button { color: inherit; font: inherit; cursor: pointer }
   padding: var(--space-24);
 }
 .static-edition h1 { font-size: 48px; font-weight: 500; margin: 0 }
-.static-edition a { color: inherit }
 
 .glass-app {
   --inset: max(24px, calc(100vw / 24 + 10px));
@@ -99,10 +98,11 @@ button { color: inherit; font: inherit; cursor: pointer }
   right: max(var(--inset), env(safe-area-inset-right));
   pointer-events: none;
 }
-.top a, .lower button { pointer-events: auto }
+.lower button { pointer-events: auto }
 
 .top {
   top: max(20px, env(safe-area-inset-top));
+  min-height: 44px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,7 +112,7 @@ button { color: inherit; font: inherit; cursor: pointer }
   width: auto;
   height: 22px;
 }
-.site-link, .reset {
+.reset {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +130,7 @@ button { color: inherit; font: inherit; cursor: pointer }
   text-decoration: none;
   transition: border-color .18s ease, background .18s ease;
 }
-:is(.site-link, .reset):hover { border-color: #fafcf5b3; background: #182128d9 }
+.reset:hover { border-color: #fafcf5b3; background: #182128d9 }
 
 .lower {
   bottom: max(20px, env(safe-area-inset-bottom));
@@ -188,7 +188,7 @@ button { color: inherit; font: inherit; cursor: pointer }
   .glass-app { --inset: 20px }
   .top { top: max(var(--space-8), env(safe-area-inset-top)) }
   .brand-mark { height: 18px }
-  .site-link, .reset { font-size: 14px; padding-inline: var(--space-12) }
+  .reset { font-size: 14px; padding-inline: var(--space-12) }
   .lower { bottom: max(var(--space-8), env(safe-area-inset-bottom)); row-gap: var(--space-12) }
   .lower h1 { font-size: clamp(28px, 9.6vw, 44px); line-height: 1.08 }
   .materials { width: 100%; gap: var(--space-6) }

@@ -10,7 +10,6 @@ export type Vessel = {
 
 export const config = {
   title: 'waterline',
-  site: '#',
   scene: {
     image: `${import.meta.env.BASE_URL}silver-lake.webp`,
     anchor: 0.47,

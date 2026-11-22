@@ -3,10 +3,10 @@ import { config, states, type State } from './config'
 import { Glass } from './glass/Glass'
 import { TextMotion } from './TextMotion'
 
-function Icon({ name }: { name: 'arrow' | 'reset' }) {
+function ResetIcon() {
   return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
     strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
-    <path d={name === 'arrow' ? 'M6 18 18 6M8 6h10v10' : 'M5 11a7 7 0 1 1 2 6m-2-6V5m0 6h6'} />
+    <path d="M5 11a7 7 0 1 1 2 6m-2-6V5m0 6h6" />
   </svg>
 }
 
@@ -87,10 +87,6 @@ export function App() {
       <header className="top">
         <img className="brand-mark" src={`${import.meta.env.BASE_URL}logo.png`} width="42" height="22"
           alt="" aria-hidden="true" />
-        <a className="site-link" href={config.site}>
-          <TextMotion text="visit site" paused={paused} />
-          <Icon name="arrow" />
-        </a>
       </header>
       <footer className="lower">
         <TextMotion as="h1" text={config.title} paused={paused} />
@@ -102,7 +98,7 @@ export function App() {
             </button>)}
           </nav>
           {state === 'dust' && !fallback && <button className="reset" title="reset surface" onClick={() => glass.current?.reset()}>
-            <Icon name="reset" /><TextMotion text="reset surface" paused={paused} />
+            <ResetIcon /><TextMotion text="reset surface" paused={paused} />
           </button>}
         </div>
       </footer>
